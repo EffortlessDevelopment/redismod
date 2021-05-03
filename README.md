@@ -63,6 +63,15 @@ $ docker run \
   --dir /data
 ```
 
+```text
+$ docker run \
+  -p 3000:3000 \
+  -v $HOME/data:/data \
+  redislabs/redismod \
+  --loadmodule /usr/lib/redis/modules/redisearch.so \
+  --dir /data
+```
+
 ### Running the container with a configuration file
 
 Assuming that you have put together a configration file such as the following, and have stored it at `/home/user/redis.conf`:
